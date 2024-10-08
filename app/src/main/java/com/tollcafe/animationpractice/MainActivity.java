@@ -50,13 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         // 创建一个 Handler
         Handler handler = new Handler();
+        float[] angles = {0f, 90f, 180f, 270f};
 
         Runnable animatePlane = new Runnable() {
-
             @Override
             public void run() {
                 // 随机旋转角度
-                float[] angles = {0f, 90f, 180f, 270f};
                 int index = new Random().nextInt(angles.length);
                 float rotationAngle = angles[index];
                 if(rotationAngle==270f){
